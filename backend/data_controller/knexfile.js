@@ -8,20 +8,18 @@
 // npm install sqlite3
 // npx knex init
 
-module.exports = {
-
-  development: {
-    client: 'sqlite3',
-    connection: {
-      filename: './data_controller/data/myData.db'
-    },
-    migrations: {
-      directory : './data/migrations'  //where you declere the tables, what data type and so on
-    },
-    // seeds :{  // test data to initialize the data base
-    //   directory: "./data/seeds"
-    // },
-    useNullAsDefault : true,
-  },
-
-};
+export default {
+	development: {
+	  client: 'sqlite3',
+	  connection: {
+		filename: './data_controller/data/myData.db'
+	  },
+	  migrations: {
+		directory : './data/migrations'  //where you declere the tables, what data type and so on
+	  },
+	  // seeds :{  // test data to initialize the data base
+	  //   directory: "./data/seeds"
+	  // },
+	  useNullAsDefault : true,
+	},
+  };

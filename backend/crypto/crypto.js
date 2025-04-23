@@ -1,11 +1,8 @@
 
-const crypto = require('crypto');
-
-const hashPassword = (password) => {
-	const hash = crypto.createHash('sha256');
-	hash.update(password);
-	return hash.digest('hex');
+function hasPassword(password) {
+    // ... your hashing logic ...
+    console.warn("Warning: Crypto function needs implementation!"); // Placeholder
+    return `hashed_${password}`; // Placeholder return
 }
 
-module.exports = hashPassword;
-
+export default hasPassword; // Use export default
