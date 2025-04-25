@@ -9,5 +9,5 @@ npm run dev
 
 cd ./backend
 npm install
-npm run dev
+npm run dev2            ****important to use <dev2>***
 ```
