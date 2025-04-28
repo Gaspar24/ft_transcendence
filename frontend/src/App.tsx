@@ -3,6 +3,7 @@ import { GameCanvas } from './Game';
 import Welcome from './Welcome';
 import Login from './Login';
 import SignUp from './signUp';
+import Dashboard from './Dashboard';
 
 function App() {
     return (
@@ -12,6 +13,8 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/game" element={<GameCanvas />} />
                     <Route path="/signUp" element={<SignUp />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="*" element={<Welcome />} /> {/* Redirect to Welcome for any other route */}
                 </Routes>
             </div>
         // </div>

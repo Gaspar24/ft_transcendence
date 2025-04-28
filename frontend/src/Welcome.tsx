@@ -16,7 +16,7 @@ export default function Welcome() {
           <span className="text-red-500">O</span>
           <span className="text-green-400">N</span>
           <span className="text-blue-400">G</span>
-          <Link to="/game" className="ml-2 p-1 text-xs bg-gray-600 hover:bg-gray-500 rounded text-white transition">▶</Link>
+          <Link to="/dashboard" className="ml-2 p-1 text-xs bg-gray-600 hover:bg-gray-500 rounded text-white transition">▶</Link>
         </h1>
 
         {/* Buttons - check in colour in .css*/}
