@@ -1,23 +1,20 @@
-import { Routes, Route, Link } from 'react-router-dom';
-import Game from './Game';
+import { Routes, Route } from 'react-router-dom';
+import { GameCanvas } from './Game';
+import Welcome from './Welcome';
 import Login from './Login';
-import SignUp from './signUp'; // Import the SignUp component
+import SignUp from './signUp';
 
 function App() {
     return (
-        <div>
-            <nav style={{ marginBottom: '1rem' }}>
-                <Link to="/">Home</Link> |{' '}
-                <Link to="/game">Game</Link> |{' '}
-                <Link to="/signUp">Sign Up</Link> {/* Add a link to the SignUp page */}
-            </nav>
-
-            <Routes>
-                <Route path="/" element={<Login />} />
-                <Route path="/game" element={<Game />} />
-                <Route path="/signUp" element={<SignUp />} /> {/* Add the SignUp route */}
-            </Routes>
-        </div>
+            <div>
+                <Routes>
+                    <Route path="/" element={<Welcome />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/game" element={<GameCanvas />} />
+                    <Route path="/signUp" element={<SignUp />} />
+                </Routes>
+            </div>
+        // </div>
     );
 }
 

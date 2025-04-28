@@ -35,7 +35,7 @@ type Paddle = {
   export class GameState {
 	width: number = 900; // Game width
 	height: number = 600; // Game height
-	paddleSpeed: number = 10;
+	paddleSpeed: number = 30;
 	
 	/* Stores the positions and dimensions of the two paddles */
 	paddles: Record<string, Paddle> = {
@@ -47,8 +47,8 @@ type Paddle = {
 	ball: Ball = {
 	  x: this.width / 2, // Ball starts at the horizontal center of the screen
 	  y: this.height / 2, // Ball starts at the vertical center of the screen
-	  vx: 5, // horizontal speed of the ball
-	  vy: 3, // vertical speed of the ball
+	  vx: 4, // horizontal speed of the ball
+	  vy: 2, // vertical speed of the ball
 	  radius: 10,
 	};
   
