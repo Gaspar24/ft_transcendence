@@ -43,11 +43,18 @@ h1 {
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+	/* max-width: 1280px; */ /* Remove or comment out max-width */
+	width: 100%; /* Make it take full width */
+	margin: 0 auto;
+	/* padding: 2rem; */ /* Remove or comment out padding */
+	padding: 0;
+	text-align: center;
+	min-height: 100vh; /* Ensure it can fill height */
+	display: flex; /* Use flexbox for centering content if needed */
+	flex-direction: column; /* Stack children vertically */
+	justify-content: center; /* Center content vertically */
+	align-items: center; /* Center content horizontally */
+  }
 
 .logo {
   height: 6em;
