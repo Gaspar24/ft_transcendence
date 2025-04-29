@@ -144,18 +144,25 @@ function handleResize() {
 
     const { clientWidth: containerWidth, clientHeight: containerHeight } = container;
 
-    const paddingFactor = 2.5; // Adjust padding slightly if needed
-    const availableWidth = containerWidth * paddingFactor;
-    const availableHeight = containerHeight * paddingFactor;
+    // Remove the incorrect paddingFactor
+    // const paddingFactor = 2.5; // <-- REMOVE THIS
+    // const availableWidth = containerWidth * paddingFactor; // <-- REMOVE THIS
+    // const availableHeight = containerHeight * paddingFactor; // <-- REMOVE THIS
 
     const aspectRatio = SERVER_WIDTH / SERVER_HEIGHT;
-    let newWidth = availableWidth;
+    let newWidth = containerWidth; // Start by assuming width fits container
     let newHeight = newWidth / aspectRatio;
 
-    if (newHeight > availableHeight) {
-        newHeight = availableHeight;
+    // If calculated height is too tall, adjust based on container height instead
+    if (newHeight > containerHeight) {
+        newHeight = containerHeight;
         newWidth = newHeight * aspectRatio;
     }
+
+    // Ensure the canvas doesn't exceed container dimensions (safety check)
+    newWidth = Math.min(newWidth, containerWidth);
+    newHeight = Math.min(newHeight, containerHeight);
+
 
     canvas.width = newWidth;
     canvas.height = newHeight;
