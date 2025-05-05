@@ -1,3 +1,9 @@
+ 
+
+ Run with docker inside root folder
+    
+ docker-compose up --build
+ 
  fronteend
     1 npm install typescript --save-dev
 
@@ -15,6 +21,8 @@ got to backend
     npm run dev
 
 4. click the link where is written server running
+
+
 
 
 
